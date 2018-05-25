@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>file metadata microservice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            background-image: linear-gradient(to right, #f70cdf, white);
+            background-image: -webkit-linear-gradient(to right, #f70cdf, white);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        label, input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/get-size" method="POST" enctype="multipart/form-data">
+        <label>Submit a file and view its size.<br>
+        You may only upload image and audio files, thx :)</label>
+        <input type="file" name="file">
+        <input type="submit" name="submit">
+    </form>
+</body>
+</html>
